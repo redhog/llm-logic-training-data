@@ -7,16 +7,16 @@ radiation, providing most of the energy for life on Earth. The Sun has
 been an object of veneration in many cultures. It has been a central
 subject for astronomical research since antiquity.
 ===
-IsA(Sun, Star).
-Center(Sun, SolarSystem).
-IsA(Sun, Is(ConsistsOf(Ball, Plasma), Hot)).
-HeatedBy(Sun, Fusion).
-Emits(Sun, Wavelength(Light, Visible)).
-Emits(Sun, Wavelength(Light, InfraRed)).
-Emits(Sun, Wavelength(Light, UltraViolet)).
-Sustains(On(Life, Earth), Emits(Sun, _)).
-ObjectOfVeneration(Sun, Culture(_)).
-CentralSubjectOf(Sun, Astronomy).
+is_a(sun, star).
+center(sun, solar_system).
+is_a(sun, is(consists_of(ball, plasma), hot)).
+heated_by(sun, fusion).
+emits(sun, wavelength(light, visible)).
+emits(sun, wavelength(light, infrared)).
+emits(sun, wavelength(light, ultraviolet)).
+sustains(on(life, earth), emits(sun, _)).
+object_of_veneration(sun, culture(_)).
+central_subject_of(sun, astronomy).
 ###
 
 ---
@@ -30,11 +30,11 @@ hydrogen (~73%); the rest is mostly helium (~25%), with much smaller
 quantities of heavier elements, including oxygen, carbon, neon, and
 iron.[19]
 ===
-Orbit(Sun, GalacticCenter, Range(LightYears(24.000), LightYears(28.000))).
-Distance(Sun, Earth, LightMinutes(8)).
-Diameter(Sun, LightSeconds(4.64)).
-==(Mass(Sun), Mass(Earth) * 330000).
-==(Mass(Sun), Mass(SolarSystem) * 0.9986).
-==(Mass(Part(Sun, Hydrogen)), 0.75 * Mass(Sun)).
-==(Mass(Part(Sun, Helium)), 0.25 * Mass(Sun)).
+orbit(sun, galactic_center, range(light_years(24.000), light_years(28.000))).
+distance(sun, earth, light_minutes(8)).
+diameter(sun, light_seconds(4.64)).
+==(mass(sun), mass(earth) * 330000).
+==(mass(sun), mass(solar_system) * 0.9986).
+==(mass(part(sun, hydrogen)), 0.75 * mass(sun)).
+==(mass(part(sun, helium)), 0.25 * mass(sun)).
 ###
