@@ -1,0 +1,26 @@
+---
+Someones grandparent is a person who is the parent of the parent of
+the first person. John and Denise are the parents of Anna, and Sara
+and James are Johns parents. Is James Annas grandparent? Is James the
+grandparent of anyone? Who is Annas grandparent? Is Anna the
+grandparent of James? Is Anna the grandparent of anyone?
+===
+grandparent(A, C) :- parent(A, B), parent(B, C).
+parent(john, anna).
+parent(denise, anna).
+parent(sara, john).
+parent(james, john).
+?- grandparent(james, anna).
+  yes
+?- grandparent(james, X).
+  X = anna
+  yes
+?- grandparent(X, anna).
+  X = sara
+  X = james
+  yes
+?- grandparent(anna, james).      
+  no
+?- grandparent(anna, X).    
+  no
+###
